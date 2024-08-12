@@ -1,0 +1,8 @@
+#contenedorTitulo{
+  display:flex;
+  align-items:center;
+  justify-content:center
+}
+#titulo{
+  color:green
+}

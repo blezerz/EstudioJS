@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <p>Ingresa tu nombre</p>
+  <input type = "text" id = "nombreUsuario">
+  <button onclick = "saludarUsuario()">saludar</button>
+
+  <script>
+    /*creo una funcion la cual envia un mensaje que es el valor deñ id nombreUsuario que lo busca en este documento por el elemento id*/
+    function saludarUsuario(){
+      /*a una variable le asignamos el valor de nombreUsuario del html*/
+      let miNombre= document.getElementById("nombreUsuario").value;
+      alert("hola " + miNombre)
+    }
+  </script>
+</body>
+</html>

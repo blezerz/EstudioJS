@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Document</title>
+</head>
+<body>
+  <div id="nombre"></div>
+
+  <script>
+    let datosJson;
+    //creamos un bojeto con XMLHttpRequest que nos permitira acceder a los objetos json
+    let xhr= new XMLHttpRequest();
+ a   //open nos sirve para abrir una conexion con el servidor
+    //el metodo GET es la soliciud de obtener algo
+    //persona.json nos da el url del archivo json
+    //true nos indica que el archivo se va a abrir en modo asincrono o no, (cargar la soliitud en segundo plano)
+    xhr.open("GET","persona.json",true);
+
+    //a con el metodo responseType y el valor json, donde la variable esperara tipo de dato json 
+    xhr.responseType="json";
+
+    //con el metodo onload se ejecutara cada ves que se complete la solicitud y se reciva una respuesta satisfacoteria del servidor
+    xhr.onload= function(){
+
+      
+      //si la propiedad statis del objeto xhr es igual a 200, es decir que la solicitud fue satisfactora y si es asi se ejecutara el if
+      if(xhr.status===200){
+
+        //ahora almacenamos la respuesta del objeto en una variable con .response indicamos que es la reúesta
+        datosJson=xhr.response;
+
+        //se captura el elemento nombre del html
+        let elementoTexto = document.getElementById("nombre");
+
+        //le ingresamos el valor del objeto json
+        elementoTexto.textContent=datosJson.nombre;
+      }else{
+        alert("error");
+      }
+    }
+
+    xhr.send();
+    
+  </script>
+</body>
+</html>

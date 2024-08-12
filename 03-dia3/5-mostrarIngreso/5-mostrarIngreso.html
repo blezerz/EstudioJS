@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Document</title>
+</head>
+<body>
+  <p>Ingresar Nombre</p>
+  <input type="text" id="nombreUsuario">
+  <button onclick="mostrarNombre()">Ingresar</button><!--esto ocurrrira si se apreta el boton ingresar/ se activara la funcion mostrarNombre-->
+  <h1 id="salida">no se tu nombre</h1>
+
+  <script>
+    function mostrarNombre(){
+      let elementoNombre=document.getElementById("nombreUsuario");//buscamos al usuario y lo asignamos a una variable
+      let elementoTexto=document.getElementById("salida");//buscamos el h1 y lo asignamos a una variable
+      let mensaje1="tu te llamas "+elementoNombre.value + " y eres ejecutivo";//le asignamos a una variable un mensaje con el nombre del elementi nombre
+      let mensaje2="tu te llamas"+elementoNombre.value +" y eres supervisor"
+      elementoTexto.textContent=mensaje1 ;//con textContent le asignamos un nuevo contenido a la etiqueta apuntada h1
+      if (elementoNombre.value == "Victor"){
+        elementoTexto.textContent=mensaje2;
+      } else{
+        elementoTexto.textContent=mensaje1
+      }
+    }
+  </script>
+</body>
+</html>

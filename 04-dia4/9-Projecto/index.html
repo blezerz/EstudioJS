@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section id="contenedor">
+    <article id="calculador">
+      <section id="contResultado">
+        <p id="resultado"></p>
+      </section>
+      <section id="contenedorInput2">
+        <button id="buttonRedondeo" onclick="redondeo()">redo</button>
+        <button id="buttonAbajo" onclick="redondeoAbajo()">abajo</button>
+        <button id="buttonArriba" onclick="redondeoArriba()">arriba</button>
+      </section>
+
+      <section id="contenedorInput">
+        <input type="number" placeholder="Ingresa num1" id="inputNum1">
+        <input type="number" placeholder="Ingresa num2" id="inputNum2">
+      </section>
+
+      <!-- Nuevo input para función y botones de derivada -->
+      <section id="contenedorFuncion">
+        <input type="text" placeholder="Ingresa función" id="inputFuncion">
+        <button id="buttonDerivada" onclick="btnDerivada()">Derivada</button>
+        <button id="buttonDobleDerivada" onclick="btnDobleDerivada()">Doble Derivada</button>
+      </section>
+
+      <section id="contenedorBotones">
+        <button id="buttonMas" onclick="btnSuma()">+</button>
+        <button id="buttonMenos" onclick="btnResta()">-</button>
+        <button id="buttonMultiplicacion" onclick="btnMultiplicar()">X</button>
+        <button id="buttonDivicion" onclick="btnDividir()">/</button>
+        <button id="buttonPotencia" onclick="btnPotencia()">x^</button>
+        <button id="buttonAbsoluto" onclick="btnAbsoluto()">ABS</button>
+        <button id="buttonRaiz" onclick="btnRaiz()">√</button>
+        <button id="buttonRandom" onclick="btnRandom()">Rand</button>
+      </section>
+    </article>
+  </section>
+  <script src="script.js"></script>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.js"></script>
+
+
+</html>

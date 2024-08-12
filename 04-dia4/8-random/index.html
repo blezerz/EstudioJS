@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Random</title>
+</head>
+<body>
+  <button onclick="crearAleatoreo()">dame un aleatoreo</button>
+  <h2>numero aleatoreo <span id="textAleatoreo">---</span></h2>
+
+  <script>
+    let elementoTexto = document.getElementById("texAleatoreo");
+    function crearAleatoreo(minimo,maximo) {
+      textAleatoreo.textContent = Math.floor(Math.random() * (maximo-minimo)+minimo);/*
+      Math.random, entrega un numero random entre 0 y 1
+      
+      con el * maximo  nos dara el entero que queremos mas sus decimales, con un limite establecido
+      
+      Math.floor nos redondeara el numero para abajo los que nos quitara los decimales*/
+      
+      
+    }
+  </script>
+</body>
+</html>

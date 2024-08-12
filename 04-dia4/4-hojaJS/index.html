@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <p>Primer Numero</p>
+  <input type="number" id="primerNumero">
+  <p>Segundo Numero</p>
+  <input typle="number" id="segundoNumero">
+  <button onclick="mostrarResultado()">Calcular</button>
+  <h2 id="textoResultado"></h2>
+
+
+  <script>
+    function sumar(numero1, numero2){//en los parentecis se ingresan los parametros
+      resultado= +numero1 + +numero2;//Al agregarle un signo mas a las variables string que sean numerro , las transforma a variables number y asi poder trabajar con calculos con ellas, ya que los input toman los numeros como String de forma predeterminada
+      return resultado;
+
+  </script>
+</body>
+</html>

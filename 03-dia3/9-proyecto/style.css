@@ -1,0 +1,55 @@
+html {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(to right ,#e81717, #be6073 );
+  margin: 0;
+  
+}
+
+header {
+  display: flex;
+  background-image:linear-gradient(to right, #666666, #0d0d0d);
+  color :white;
+  width: 100%;
+}
+
+#contenedorCont{
+  display:flex;
+  flex-direction: column;/*dejamos como columna el eje principal*/
+  align-items: center;/*centramos en el eje secundario*/
+}
+
+#contador{
+  border:1px green solid;
+  border-radius: 10px;
+  background-color: #cc900f;
+  padding:0px;
+  width:100px;
+  text-align:center;
+  margin-top:2%;
+}
+
+#textCont{
+  font-size:30px;
+  font-family: 'Couriers New', Courier, monospace;
+  margin:0;
+  padding:0;
+}
+
+#btnInicial{
+  margin-top: 15px;
+}
+
+#artPreguntas{
+  width: 400px;
+  padding:20px;
+  margin:auto;
+  border:1px black solid;
+  background-color: beige;
+  display:flex;
+  flex-direction: column;
+}

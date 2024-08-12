@@ -1,0 +1,18 @@
+{
+  "banco": "Banco Sprinfild",
+  "sucursal":"Sprinfild, SC",
+  "titular":"torres Manuel",
+  "nroCuenta": "123456789",
+  "saldo":[
+    
+    {
+      "moneda":"USD",
+      "monto": 725.00},
+    {
+      "moneda":"EUR",
+      "monto":500.00
+    }],
+  "nroCBU":"1243",
+  "abierto":"01/05/2021"
+    
+}

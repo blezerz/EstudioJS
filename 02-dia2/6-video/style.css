@@ -1,0 +1,31 @@
+body{
+  background-color: bisque;
+}
+
+.principal{
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+#informacion{
+  text-align: center;
+}
+/*darle estilo a los atributos de un elemento html*/
+a[href]{
+  background-color: gold;
+}
+/*mas especifico*/
+a[href*=".cl"]{
+  background-color: green;
+}
+
+h1:hover{ /*hover es en el caso que el mause pase por encima de un elemento*/
+  color: red;
+}
+
+.principal::first-line{/*sudosleccion que selecciona la primera linea de un parrafo dentro del elemento selecionado*/
+  background-color: lightgray;
+}
+
+.principal2:hover:first-line{/*si agregamos una seudoseleccion entremedio como hover, se activara , nos cambiara el color d ela primera linea al poner el mause encima del parrafo*/
+  background-color: lightgray;
+}

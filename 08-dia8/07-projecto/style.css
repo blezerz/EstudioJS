@@ -1,0 +1,23 @@
+#divInput{
+  display:flex;
+  flex-direction: column;
+}
+#divInput, input{
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+#contenedorBotones{
+  height: 100px;
+  width: 200px;
+  display:flex;
+  flex-direction: column;
+  justify-content:space-between ;
+}
+#bttnAgregar, #bttnMostrar{
+  width: 200px;
+  height: 40px;
+  background-color: #0c047c;
+  color: white;
+  
+}

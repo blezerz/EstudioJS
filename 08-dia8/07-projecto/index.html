@@ -1,0 +1,37 @@
+<!-- una pagina html donde se puedan ingresar los datos y luego un boton que almacene el dato en un array y luego otro boton que muestre todos los objetos creados-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+   
+</head>
+<body>
+  <div id="divInput">
+    <label for="dtEdad">Edad</label>
+    <input id="dtEdad"></input>
+
+    
+    <label for="dtNombre"">nombre</label>
+    <input id="dtNombre"></input>
+    
+    <label for="dtApellido">Apellido</label>
+    <input id="dtApellido"></input>
+    
+    <label for="dtFechaNacimiento"">Fecha de nacimiento</label>
+    <input id="dtFechaNacimiento"></input>
+    
+    <label for="dtCargo">Cargo</label>
+    <input id="dtCargo"></input>
+  </div>
+  <div id="contenedorBotones">
+    <button id="bttnAgregar" onclick="btnCargar()">Cargar Empleado</button>
+    <button onclick="btnMostrar()" >Mostrar Empleados</button>
+  </div>
+
+  <p id="sas"></p>
+
+  <script src="script.js"></script>
+ 
+</body>
+</html>

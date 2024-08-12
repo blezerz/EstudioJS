@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //asi se crea un objeto
+    let perro={
+      //sus propiedades
+      nombre:"simba",
+      raza: "Shin tzu", 
+      edad:4,
+      //esto es un metodo, similar a una funcion y para acceder a ella se usa el punto ejemplo perro.ladrar()
+      ladrar(){
+        console.log("Guau");
+      }
+    }
+//podemos modificar el valor desde la consola (ejemplo perro.edad=10)
+
+
+    //podemos crear una funcion que al llamarla modificara la edad del objeto
+    function cumplirAnios(){
+      perro.edad = perro.edad + 1;
+    }
+
+    //para crear una nueva propiedad a un objeto se hace con corchete [] (perro["colorOjos"]= "azules")
+    perro["colorOjos"]= "azules";
+  </script>
+</body>
+</html>

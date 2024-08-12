@@ -1,0 +1,129 @@
+body {
+  background-image: linear-gradient(to right, #dbdbdb, #8a8a8a);
+}
+
+#contenedor {
+  background-image:linear-gradient(to right, #4936d3, #7068a6) ;
+  width: 250px;
+  height: 350px;
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+
+  justify-content: space-around; /* Centrar en el eje principal */
+  flex-wrap: wrap;
+  border-radius: 10px;
+}
+#contenedor:hover{
+  box-shadow: 0px 0px 5px #000000;
+}
+
+#contResultado {
+  width: 200px;
+  height: 50px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 15px;
+  display: flex;
+}
+
+
+#contenedorInput {
+  justify-content: space-around;
+  background-color: #a3a3a3;
+  border:1px solid black;
+  border-radius: 10px;
+  display: flex;
+  margin-top: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+#contenedorInput2 {
+  justify-content: space-around;
+  background-color: #a3a3a3;
+  border:1px solid black;
+  border-radius: 10px;
+  display: flex;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 3px;
+  width: 180px;
+  margin: auto;
+  margin-top: 5px;
+}
+#buttonRedondeo,
+#buttonArriba,
+#buttonAbajo{
+  width: 50px;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid black;
+  font-size: 12px;
+}
+
+
+
+
+#inputNum1, #inputNum2 {
+  width: 70px;
+  border-radius: 5px;
+}
+
+#contenedorBotones {
+  background-color: red;
+  justify-content: center;
+  display: flex;
+  margin-top: 15px;
+  width: 220px;
+  flex-wrap: wrap;
+  }
+
+#buttonMas,
+#buttonMenos,
+#buttonMultiplicacion,
+#buttonDivicion,
+#buttonAbsoluto,
+#buttonPotencia,
+#buttonRaiz,
+#buttonRandom,
+#bittonRedondeo{
+  width: 40px;
+  height: 40px;
+  margin:6px;
+  text-align: center;
+  padding:0;
+  border-radius: 5px;
+}
+
+
+#contenedorFuncion {
+  justify-content: space-around;
+  background-color: #a3a3a3;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 5px;
+  width: 220px;
+  margin: auto;
+}
+
+#inputFuncion {
+  width: 100px;
+  border-radius: 5px;
+}
+
+#buttonDerivada,
+#buttonDobleDerivada {
+  width: 80px;
+  height: 30px;
+  margin: 6px;
+  text-align: center;
+  padding: 0;
+  border-radius: 5px;
+  border: 1px solid black;
+}

@@ -1,0 +1,12 @@
+/* elementro de estos elementos*/
+div p{
+  color:green;
+}
+
+ol > li{ /* selecciona los hijos directos y no los nietos*/
+  font-weight: bold;
+}
+
+h2 + h3{
+  background-color: lightskyblue;
+}

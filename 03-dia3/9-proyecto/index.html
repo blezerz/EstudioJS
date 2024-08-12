@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1>Bienvendio a Preguntas</h1>
+  </header>
+  <section id="contenedorCont">
+    <article id="contador">
+      <p id="textCont">30</p>
+    </article>
+    <article>
+      <button id="btnInicial" onclick="mostrarPregunta(); IniciarContador()">Iniciar</button>
+    </article>
+  </section>
+  <section>
+    <article id="artPreguntas">
+      <p>apreta el boton iniciar para que aparescan las preguntas</p>
+      <section>
+        <p id="pregunta1">Pregunta 1</p>
+        <input type="text" id="respuesta1" placeholder="Ingresa Tu Respuesta">
+      </section>
+      <section>
+        <p id="pregunta2">Pregunta 2</p>
+        <input type="text" id="respuesta2" placeholder="Ingresa Tu Respuesta">
+      </section>
+      <section>
+        <p id="pregunta3">Pregunta 3</p>
+        <input type="text" id="respuesta3" placeholder="Ingresa Tu Respuesta">
+      </section>
+      <section>
+        <p id="pregunta4">Pregunta 4</p>
+        <input type="text" id="respuesta4" placeholder="Ingresa Tu Respuesta">
+      </section>
+      <section>
+        <p id="pregunta5">Pregunta 5</p>
+        <input type="text" id="respuesta5" placeholder="Ingresa Tu Respuesta">
+      </section>
+      <button id="btnResponder" onclick="responder()">responder</button>
+    </article>
+  </section>
+  <script>
+    let cont=30;
+    let contador=document.getElementById("contador");
+    let intervalo;
+    /*Identificacion de preguntas*/
+    let pregunta1 = document.getElementById("pregunta1");
+    let pregunta2 = document.getElementById("pregunta2");
+    let pregunta3 = document.getElementById("pregunta3");
+    let pregunta4 = document.getElementById("pregunta4");
+    let pregunta5 = document.getElementById("pregunta5");
+
+    //identificador de respuestas
+    let respuesta1 =document.getElementById("respuesta1");
+    let respuesta2 =document.getElementById("respuesta2");
+    let respuesta3 =document.getElementById("respuesta3");
+    let respuesta4 =document.getElementById("respuesta4");
+    let respuesta5 =document.getElementById("respuesta5");
+    
+    function responder(){
+      let textResp = "Respuesta 1: Santiago. \n Tu Respuesta: "
+        + respuesta1.value + "\nRespuesta 2: Gabriel Borich \n Tu respuesta :" + respuesta2.value + "\nRespuesta 3: Costanera Center \n Tu respuesta :" + respuesta3.value + " \nRespuesta 4: Casa de la Moneda \n Tu respuesta: " + respuesta4.value + "\nRespuesta 5: Porotos, Humitas, Cazuela \nTu respuesta: " + respuesta5.value; 
+      clearInterval(intervalo);//para el intervalo al responder
+      alert(textResp);
+      pregunta1.textContent = "pregunta 1";
+      pregunta2.textContent = "pregunta 2";
+      pregunta3.textContent = "pregunta 3";
+      pregunta4.textContent = "pregunta 4";
+      pregunta5.textContent = "pregunta 5";
+    }
+    function IniciarContador(){
+      contador.textContent=cont;
+      clearInterval(intervalo);//para el intervalo cada ves que se aprete el boton
+      intervalo = setInterval(contadorOn,1000);//inicia un intervalo
+    }
+    function contadorOn(){
+      cont-=1;
+      contador.textContent=cont;
+      if(cont==0){
+        contador.textContent=0;
+        alert("Se acabo el tiempo");
+        pregunta1.textContent = "pregunta 1";
+        pregunta2.textContent = "pregunta 2";
+        pregunta3.textContent = "pregunta 3";
+        pregunta4.textContent = "pregunta 4";
+        pregunta5.textContent = "pregunta 5";
+        clearInterval(intervalo);//termina el intervalo
+      }
+    }
+    /*mostrar preguntas*/
+    function mostrarPregunta(){
+      cont=30;//Reiniciar contador
+      pregunta1.textContent = "cual es la capital de chile";
+      pregunta2.textContent = "cual es el precidente de chile";
+      pregunta3.textContent = "cual es el edificio mas alto de santiago";
+      pregunta4.textContent = "como se llama la casa del presidente de chile";
+      pregunta5.textContent = "comida tipica de chile"; 
+    }
+  </script>
+</body>
+</html>

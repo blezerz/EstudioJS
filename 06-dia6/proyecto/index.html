@@ -1,0 +1,39 @@
+<!--
+resumen de calificaciones
+-array 5 calificaciones
+- mostarar 4 botones
+---mostar lista con notas
+---calcular promedio
+---obtener nota mas alta
+---mostrar notas menores a 4.0
+
+¨loop diferente para cada funcionalidad 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="style.css" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body onload="listarNotas()"><!--al cargar el sitio iniciara la funcion listar notas del html-->
+  <div class="logo">
+    <img src="candado.png"/>
+    <h2>Bienvenido a tu boletín infantil</h2>
+  </div>
+      
+  <div class="alumno">
+    <h3>Alumno: Juan Pérez</h3>
+  </div>
+
+  <h4>Notas:</h4>
+  <ul id="listarNotas"> 
+  </ul>
+
+  <button onclick="promedioNotas()">Pormedio</button>
+  <button onclick="notaAlta()">Nota mas Alta</button>
+  <button onclick="notaRoja()">notas Rojas</button>
+  <p id="resultado"></p>
+  <script src="script.js"></script>
+</body>
+</html>

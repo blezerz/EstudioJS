@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <div id="nombre">
+
+  </div>
+
+  <script>
+    let datosJson;
+    fetch('perdona.json')
+    .then(res=>res.json())
+    .then((salida)=>{
+      datosJson=salida;
+      let elementoTexto= document.getElementById("nombre");
+      elementoTexto.textContent=datosJson.nombre;
+      let elemetoP= document.createElement("p");
+      elemetoP.textContent=datosJson.edad;
+      elementoTexto.appendChild(elemetoP);
+    })
+      //con este metodo declaramos una funcion que sucedera si la solicitud en json da error 
+    .catch(function(error){alert(error)});
+  </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <!--onLoad nos permite cargar algo en el body en este caso cargamos la funcion comenzar reloj-->
+<body onLoad="comenzarReloj()">
+  <input type="number" id="tiempoElegido">
+  <!--El boton llama a la funcion directamente-->
+  <button onclick="comenzarTiempo()">Alarma</button>
+  <h1 id="textoAlarma">00:00:00</h1>
+
+  <audio id="audioAlarma">
+    <source src="alarma.mp3" type="audio/mpeg">
+    Sonido no habilitado
+  </audio>
+  <script>
+  
+    let elementoSegundos = document.getElementById("tiempoElegido");
+    let elementoTextoAlarma = document.getElementById("textoAlarma");
+    let elementoSonidoAlarma = document.getElementById("audioAlarma")
+
+    function comenzarTiempo(){
+      setTimeout(tiempoCumplido, 1000 * elementoSegundos.value);//setTimeout es una accion que comenzara cuando transcurra el tiempo (en milisegundos)/tiempoCumplido esinte una funcion que nos dara un mensaje
+    }
+
+    function tiempoCumplido(){
+
+      elementoTextoAlarma.style.color ="green";
+      elementoSonidoAlarma.play();
+    }
+
+    function comenzarReloj(){
+      setInterval(ticTac,1000)
+    //nos deja generar un intervalo(se cumplira la funcion cada que acaba el tiempo)
+    }
+
+    function ticTac(){
+      let tiempoActual = new Date();//se almacena la fecha y hora actual en la variable
+      let hora = tiempoActual.getHours();//almacenamos la hora
+      let minutos = String(tiempoActual.getMinutes()).padStart(2, "0");
+      //transofmramos la variable a string y con el metodo padStart le damos un maximo de 2 digitos y le damos un 0 al inicio
+      let segundos = String(tiempoActual.getSeconds()).padStart(2,"0");//los segundos actuales en string con relleno 
+
+      let textoHora = hora + ":" + minutos + ":" + segundos;
+      elementoTextoAlarma.textContent = textoHora;
+    }
+    
+
+  </script>
+</body>
+</html>

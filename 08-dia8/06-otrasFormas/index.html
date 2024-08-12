@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //utilizamos un objeto predetermionado vacio
+    let coche1 = new Object();
+
+    //creo una propiedad
+    coche1.marca = "Ford";
+    //otra forma de agregar propiedad
+    coche1['modelo']="Prisma";
+    //creamos la funcion encendido
+    coche1.encendio = function(){
+      //enviamos un alert que indique coche encendido
+      alert("coche encendido")
+    };
+    //le asignamos una propiedad con valor 
+    let perro1=new Object({nombre:"Simba"});
+
+    //con create podemos crear un objeto al asignar un objeto como parametro este lo creara igual al objeto dado en el prarametro
+    let coche2= Object.create(coche1);
+  </script>
+</body>
+</html>
